@@ -31,7 +31,7 @@ end
 bash "gvm_install" do
   user        node.gvm.user
   cwd         node.gvm.home
-  environment Hash['HOME' => node.gvm.home, 'gvm_user_install_flag' => '1']
+  environment Hash['HOME' => node.gvm.home]
   code        <<-SH
   curl -s get.gvmtool.net -o /tmp/gvm-installer &&
   bash /tmp/gvm-installer
