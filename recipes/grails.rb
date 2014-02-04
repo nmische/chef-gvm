@@ -13,5 +13,5 @@ bash 'gvm install grails' do
     source "$HOME/.gvm/bin/gvm-init.sh"
     gvm install grails
     EOH
-  user "vagrant"
+  user node['gvm']['user']
 end
