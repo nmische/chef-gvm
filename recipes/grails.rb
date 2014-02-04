@@ -14,4 +14,5 @@ bash 'gvm install grails' do
     gvm install grails
     EOH
   user node['gvm']['user']
+  not_if { File.exists?("#{node['gvm']['home']}/.gvm/grails/current") }
 end
