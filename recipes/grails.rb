@@ -11,7 +11,7 @@ bash 'gvm install grails' do
   })
   code <<-EOH
     source "$HOME/.gvm/bin/gvm-init.sh"
-    gvm install grails
+    gvm install grails #{node['gvm']['grailsVersion']}
     EOH
   user node['gvm']['user']
   not_if { File.exists?("#{node['gvm']['home']}/.gvm/grails/current") }
