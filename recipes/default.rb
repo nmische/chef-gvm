@@ -18,7 +18,7 @@
 #
 
 gvm_pkgs = value_for_platform_family({
-  "debian" => ["curl","unzip","sed"],
+  ["debian", "rhel"] => ["curl","unzip","sed"],
   "default" => ["curl","unzip","sed"]
 })
 
